@@ -1,6 +1,13 @@
 import * as React from "react";
-import ReactDOM from "react-dom";
 
-import HelloWorld from "./components/Header";
+const App = () => {
+    return (
+        <>
+            <div className={"app"}>
+                <h1>{"Treedle"}</h1>
+            </div>
+        </>
+    );
+};
 
-ReactDOM.render(<HelloWorld />, document.querySelector("#app"));
+export default App;

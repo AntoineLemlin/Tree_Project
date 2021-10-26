@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "style.scss",
+        "partials/_header.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
