@@ -8,4 +8,5 @@
 
 module.exports = {
     extends: "@becode",
+    parser: "@babel/eslint-parser",
 };

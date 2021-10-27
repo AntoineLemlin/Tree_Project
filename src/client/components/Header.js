@@ -1,11 +1,9 @@
 import * as React from "react";
 
-const HelloWorld = () => (
+const Header = () => (
     <div>
-        <h1>{"Hello, Quentin!"}</h1>
-        <hr />
-        <small>{"becode/mwenbwa"}</small>
+        <h1>{"Treedle.io"}</h1>
     </div>
 );
 
-export default HelloWorld;
+export default Header;

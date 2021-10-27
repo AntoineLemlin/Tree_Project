@@ -12,7 +12,7 @@ const webpack = require("webpack");
 const {resolve} = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = env => {
+module.exports = (env) => {
     const plugins = [
         new webpack.EnvironmentPlugin({
             NODE_ENV: env === "dev" ? "development" : "production",
@@ -58,9 +58,13 @@ module.exports = env => {
                 ? "cheap-module-eval-source-map"
                 : "hidden-source-map",
         context: resolve(__dirname, "./src/client"),
-        entry: ["./app.js"],
+        entry: ["./index.js"],
         module: {
             rules: [
+                {
+                    test: /\.css$/,
+                    use: ["style-loader", "css-loader"],
+                },
                 {
                     test: /\.(png|jpg|gif)$/,
                     use: [
@@ -105,6 +109,7 @@ module.exports = env => {
                 },
             ],
         },
+
         plugins,
         optimization,
         performance: {hints: false},
