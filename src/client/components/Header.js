@@ -1,9 +1,9 @@
 import * as React from "react";
 
 const Header = () => (
-    <div>
+    <header>
         <h1>{"Treedle.io"}</h1>
-    </div>
+    </header>
 );
 
 export default Header;
