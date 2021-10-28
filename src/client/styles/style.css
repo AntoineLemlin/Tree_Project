@@ -1,13 +1,39 @@
-body {
-  background-color: red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carme&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
+* body {
+  background-color: #003b4a;
+  font-family: "Inconsolata", monospace;
+}
+* body .sidebar {
+  background-color: #30B38C;
+  width: 25%;
+  border-radius: 3rem;
+  text-align: center;
+}
+* body .sidebar h2 {
+  font-size: 3.6rem;
+  color: #003B4A;
+  padding: 1.5rem 0rem;
+  font-weight: 500;
+}
+* body .sidebar-text {
+  background-color: #AFE3D3;
+  height: 50%;
+  font-size: 2.1rem;
+  color: #1B365C;
+  padding: 1rem;
+  font-family: "Carme", sans-serif;
+  text-align: left;
+}
+* body .playerinfo p {
+  font-size: 3rem;
+  font-family: "Inconsolata", monospace;
+}
+
 /*# sourceMappingURL=style.css.map */

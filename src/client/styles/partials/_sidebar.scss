@@ -1,0 +1,29 @@
+.sidebar {
+    background-color: #30B38C;
+    width: 25%;
+    border-radius: 3rem;
+    text-align: center;
+    h2 {
+        font-size: 3.6rem;
+        color: #003B4A;
+        padding: 1.5rem 0rem;
+        font-weight: 500;
+    }
+}
+
+.sidebar-text {
+    background-color: #AFE3D3;
+    height: 50%;
+    font-size: 2.1rem;
+    color: #1B365C;  
+    padding: 1rem;
+    font-family: 'Carme', sans-serif;
+    text-align: left;
+}
+
+.playerinfo {
+    p {
+        font-size: 3rem;
+        font-family: "Inconsolata", monospace;
+    }
+}
