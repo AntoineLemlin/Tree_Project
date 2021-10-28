@@ -1,47 +1,13 @@
 .sidebar {
-    background-color: #30b38c;
-    width: 22%;
-    border-radius: 3rem;
-    text-align: center;
-    height: 82vh;
-    h2 {
-        font-size: 3.6rem;
-        color: #003b4a;
-        padding: 1.5rem 0rem;
-        font-weight: 300;
-    }
+    width: auto;
+    height: auto;
+    z-index: 999;
+    position: absolute;
+    bottom: 2rem;
+    right: 4rem;
 
-    .sidebar-element {
-        position: relative;
-
-        &::after {
-            width: 75%;
-            height: 1px;
-            background-color: #003b4a;
-            position: absolute;
-            bottom: 0;
-            content: "";
-            text-align: center;
-            left: -25%;
-            transform: translateX(50%);
-        }
-    }
-}
-
-.sidebar-text {
-    background-color: #afe3d3;
-    height: 50%;
-    font-size: 2.1rem;
-    color: #1b365c;
-    padding: 1rem;
-    font-family: "Carme", sans-serif;
-    text-align: left;
-}
-
-.playerinfo {
-    p {
-        font-size: 3rem;
-        font-family: "Inconsolata", monospace;
+    .gamelog {
+        margin-top: 1.5rem;
     }
 }
 

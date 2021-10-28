@@ -1,42 +1,20 @@
 import * as React from "react";
-import logo from "../img/logo.png";
-import menu from "../img/menu_hamburger.png";
 
 const Header = () => {
-    const navbar = React.useRef();
-    const isMenu = () => {
-        navbar.current.style.visibility === "visible"
-            ? (navbar.current.style.visibility = "hidden")
-            : (navbar.current.style.visibility = "visible");
-
-        console.log(navbar.current.style.visibility);
-    };
-
     return (
         <header>
-            <div className="logo">
-                <img src={logo} alt="" />
-            </div>
-
-            <h1>{"Treedle.io"}</h1>
-
-            <div className="links">
-                <nav style={{visibility: "visible"}} ref={navbar}>
-                    <ul>
-                        <li>
-                            <a href="#">Profile</a>
-                        </li>
-                        <li>
-                            <a href="#">Logout</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div className="menu">
-                    <a href="#" onClick={isMenu}>
-                        <img src={menu} alt="" />
-                    </a>
-                </div>
+            <h1>{"Treedle"}</h1>
+            <div class="hamburger-menu">
+                <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="50" height="5" rx="2.5" fill="white" />
+                    <rect y="15" width="50" height="5" rx="2.5" fill="white" />
+                    <rect y="30" width="50" height="5" rx="2.5" fill="white" />
+                </svg>
             </div>
         </header>
     );

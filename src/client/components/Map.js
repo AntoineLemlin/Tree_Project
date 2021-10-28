@@ -6,7 +6,8 @@ const Map = () => (
             className="map-layout"
             center={[50.6385, 5.5811]}
             zoom={13}
-            scrollWheelZoom={true}>
+            scrollWheelZoom={true}
+            zoomControl={false}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
