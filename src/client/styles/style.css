@@ -4,8 +4,9 @@
 }
 
 .map-layout {
-  width: 100%;
-  height: 100%;
+  width: 78.22vw;
+  height: 100vh;
+  border-radius: 50px;
 }
 
 body {
