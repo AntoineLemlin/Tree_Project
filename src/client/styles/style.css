@@ -1,93 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 62.5%;
-}
+/* Error: expected "{".
+ *    ,
+ * 16 |         @import "partials/map";
+ *    |                               ^
+ *    '
+ *   src/client/styles/style.scss 16:31  root stylesheet */
 
-* body {
-  background-color: #003b4a;
-  font-family: "Inconsolata", monospace;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 16 \2502          @import "partials/map";\a    \2502                                ^\a    \2575 \a   src/client/styles/style.scss 16:31  root stylesheet';
 }
-
-* body header {
-  height: 13.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* body header h1 {
-  color: white;
-  font-size: 6.4rem;
-  font-weight: 400;
-}
-
-* body header .logo {
-  height: 13.3rem;
-  width: auto;
-}
-
-* body header .logo img {
-  height: 100%;
-  width: auto;
-}
-
-* body header .links {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.5rem;
-  margin-right: 1rem;
-}
-
-* body header .links nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-* body header .links nav ul li {
-  list-style: none;
-  margin-left: 1.5rem;
-}
-
-* body header .links nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 3.147rem;
-}
-
-* body header .links .menu {
-  width: 5rem;
-  height: 7rem;
-  margin-top: -1.5rem;
-}
-
-* body header .links .menu img {
-  width: 100%;
-  height: 100%;
-}
-
-* body .map-liege {
-  height: 100%;
-  width: 70%;
-}
-
-* body .map-layout {
-  width: 78.22vw;
-  height: 100vh;
-  border-radius: 50px;
-}
-/*# sourceMappingURL=style.css.map */
