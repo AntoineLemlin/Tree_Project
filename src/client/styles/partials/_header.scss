@@ -1,0 +1,56 @@
+header {
+    height: 13.3rem;
+    display: flex;
+    align-items: center;
+    h1 {
+        color: white;
+        font-size: 6.4rem;
+        font-weight: 400;
+    }
+
+    .logo {
+        height: 13.3rem;
+        width: auto;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .links {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-right: 1rem;
+
+        nav {
+            ul {
+                display: flex;
+                li {
+                    list-style: none;
+                    margin-left: 1.5rem;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 3rem;
+                        font-weight: 400;
+                        line-height: 3.147rem;
+                    }
+                }
+            }
+        }
+
+        .menu {
+            width: 5rem;
+            height: 7rem;
+            margin-top: -1.5rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
