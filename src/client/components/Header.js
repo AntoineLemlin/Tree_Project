@@ -13,7 +13,7 @@ const Header = () => {
 
     const hamburgerMenu = () => {
         if (widthMenu === 85) {
-            setWidthMenu(185);
+            setWidthMenu(215);
         } else {
             setWidthMenu(85);
         }
@@ -78,14 +78,14 @@ const Header = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect
-                        className={widthMenu == 185 ? "path" : ""}
+                        className={widthMenu == 215 ? "path" : ""}
                         width="50"
                         height="5"
                         rx="2.5"
                         fill="white"
                     />
                     <rect
-                        className={widthMenu == 185 ? "path" : ""}
+                        className={widthMenu == 215 ? "path" : ""}
                         y="15"
                         width="50"
                         height="5"
@@ -93,7 +93,7 @@ const Header = () => {
                         fill="white"
                     />
                     <rect
-                        className={widthMenu == 185 ? "path" : ""}
+                        className={widthMenu == 215 ? "path" : ""}
                         y="30"
                         width="50"
                         height="5"

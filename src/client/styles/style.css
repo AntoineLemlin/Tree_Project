@@ -3,20 +3,28 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
+
 * body {
   background-color: #003b4a;
   font-family: "Inconsolata", monospace;
   position: relative;
 }
+
 * body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 100%;
 }
+
 * body header h1 {
   margin-left: 10rem;
   color: white;
@@ -29,64 +37,98 @@
   position: absolute;
   top: 0;
 }
+
 * body header .hidden-nav {
   opacity: 0;
 }
+
 * body header nav {
   width: 100%;
   height: 100%;
   position: relative;
+  -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
   opacity: 1;
   margin-left: 9rem;
 }
+
 * body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
 }
+
 * body header nav ul li {
   list-style: none;
   position: relative;
 }
+
 * body header nav ul li .profile-btn {
-  margin-right: 5rem;
+  margin-right: 6.5rem;
 }
+
 * body header .hamburger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 75px;
   background: #003b4a;
   border-radius: 0 0 0 75px;
   z-index: 999;
   margin-left: auto;
+  -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   position: relative;
 }
+
 * body header .hamburger-menu svg {
   position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
 }
+
 * body rect {
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 * body .path {
-  transform-origin: left;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
+
 * body .path:nth-child(2) {
-  transform-origin: center;
-  transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
+
 * body .path:nth-child(1) {
-  transform: rotate(45deg) translate(-16%, -5%);
+  -webkit-transform: rotate(45deg) translate(-16%, -5%);
+          transform: rotate(45deg) translate(-16%, -5%);
 }
+
 * body .path:nth-child(3) {
-  transform: rotate(-45deg) translate(-16%, 5%);
+  -webkit-transform: rotate(-45deg) translate(-16%, 5%);
+          transform: rotate(-45deg) translate(-16%, 5%);
 }
+
 @media only screen and (max-width: 768px) {
   * body header h1 {
     margin-left: 0;
@@ -95,11 +137,19 @@
     padding: 0.2rem 2rem 0.2rem 1rem;
   }
 }
+
 * body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 * body main .map-liege {
   position: relative;
   width: 100%;
@@ -107,11 +157,13 @@
   margin: 1rem;
   z-index: 0;
 }
+
 * body main .map-layout {
   width: 100%;
   height: 100%;
   border-radius: 5rem;
 }
+
 * body main .sidebar {
   width: auto;
   height: auto;
@@ -120,27 +172,40 @@
   bottom: 5%;
   right: 5%;
 }
+
 * body main .sidebar .gamelog {
   margin-top: 1.5rem;
 }
+
 * body main .stats-container {
   background-color: white;
   border-radius: 5000px;
   position: absolute;
   bottom: 5%;
   left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem 3rem;
 }
+
 * body main .stats-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 2rem;
 }
+
 * body main .trees {
   margin-left: 0 !important;
 }
+
 * body main .stats-container p, * body main .stats-container a {
   color: #003B4A;
   font-size: 3rem;
@@ -148,8 +213,8 @@
   text-decoration: none;
   font-weight: 300;
 }
+
 * body main .player-name {
   padding-right: 0 !important;
 }
-
 /*# sourceMappingURL=style.css.map */
