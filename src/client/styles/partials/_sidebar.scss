@@ -3,29 +3,24 @@
     height: auto;
     z-index: 999;
     position: absolute;
-    bottom: 2rem;
-    right: 4rem;
+    bottom: 5%;
+    right: 5%;
 
     .gamelog {
         margin-top: 1.5rem;
     }
 }
 
-.trees,
-.leaf {
-    margin: 1.8rem;
-    display: flex;
-    align-items: center;
+@media screen and (max-width:650px) {
+    .sidebar {
+        right: 2%;
+        bottom: 10rem;
+        svg {
+            width: 75%;
+        }
 
-    p {
-        color: #003b4a;
-        font-weight: 300;
-        margin-left: 3rem;
+        .gamelog {
+            margin-top: 1rem;
+        }
     }
-}
-
-.player-name {
-    color: #003b4a;
-    font-weight: 300;
-    padding-bottom: 1.5rem;
 }

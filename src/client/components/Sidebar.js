@@ -4,10 +4,10 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="leaderboards sidebar-element">
-                <a href="#" onClick={() => console.log("ftg")}>
+                <a href="#">
                     <svg
-                        width="120"
-                        height="120"
+                        width="100"
+                        height="100"
                         viewBox="0 0 120 120"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -23,8 +23,8 @@ const Sidebar = () => {
             </div>
             <div className="gamelog sidebar-element">
                 <svg
-                    width="120"
-                    height="120"
+                    width="100"
+                    height="100"
                     viewBox="0 0 120 120"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
