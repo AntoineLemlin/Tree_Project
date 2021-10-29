@@ -38,6 +38,46 @@
   top: 0;
 }
 
+* body header .hidden-nav {
+  opacity: 0;
+}
+
+* body header nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  opacity: 1;
+  margin-left: 15rem;
+}
+
+* body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+* body header nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+* body header nav ul li .profile-btn {
+  margin-right: 8rem;
+}
+
 * body header .hamburger-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,17 +85,56 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 125px;
   height: 125px;
   background: #003b4a;
   border-radius: 0 0 0 125px;
   z-index: 999;
   margin-left: auto;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+  position: relative;
 }
 
 * body header .hamburger-menu svg {
-  -webkit-transform: translateY(2.5rem) translateX(1rem);
-          transform: translateY(2.5rem) translateX(1rem);
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+}
+
+* body rect {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+* body .path {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+* body .path:nth-child(2) {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+* body .path:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(-16%, -5%);
+          transform: rotate(45deg) translate(-16%, -5%);
+}
+
+* body .path:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(-16%, 5%);
+          transform: rotate(-45deg) translate(-16%, 5%);
+}
+
+@media only screen and (max-width: 768px) {
+  * body header h1 {
+    margin-left: 0;
+    font-size: clamp(3rem, 4vw, 6.4rem);
+    border-radius: 0 0 3rem 0;
+    padding: 0.2rem 2rem 0.2rem 1rem;
+  }
 }
 
 * body main {
