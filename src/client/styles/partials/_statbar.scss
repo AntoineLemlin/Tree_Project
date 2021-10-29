@@ -1,0 +1,33 @@
+.stats-container {
+    background-color: white;
+    border-radius: 5000px;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    div {
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+    }
+}
+
+.trees {
+    margin-left: 0 !important;
+}
+
+.stats-container {
+    p,a {
+        color: #003B4A;
+        font-size: 3rem;
+        padding: 0 1rem;
+        text-decoration: none;
+        font-weight: 300;
+    }
+}
+
+.player-name {
+    padding-right: 0 !important;
+}

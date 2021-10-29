@@ -168,8 +168,8 @@
   height: auto;
   z-index: 999;
   position: absolute;
-  bottom: 2rem;
-  right: 4rem;
+  bottom: 5%;
+  right: 5%;
 }
 
 * body main .sidebar .gamelog {
@@ -198,5 +198,46 @@
   color: #003b4a;
   font-weight: 300;
   padding-bottom: 1.5rem;
+}
+
+* body main .stats-container {
+  background-color: white;
+  border-radius: 5000px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3rem;
+}
+
+* body main .stats-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+}
+
+* body main .trees {
+  margin-left: 0 !important;
+}
+
+* body main .stats-container p, * body main .stats-container a {
+  color: #003B4A;
+  font-size: 3rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+* body main .player-name {
+  padding-right: 0 !important;
 }
 /*# sourceMappingURL=style.css.map */
