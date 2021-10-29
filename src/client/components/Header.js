@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const Header = () => {
-    const [widthMenu, setWidthMenu] = React.useState(125);
+    const [widthMenu, setWidthMenu] = React.useState(85);
 
     const fadeOut = {
         transitionDelay: "0s",
@@ -12,10 +12,10 @@ const Header = () => {
     };
 
     const hamburgerMenu = () => {
-        if (widthMenu === 125) {
-            setWidthMenu(350);
+        if (widthMenu === 85) {
+            setWidthMenu(185);
         } else {
-            setWidthMenu(125);
+            setWidthMenu(85);
         }
     };
     return (
@@ -23,13 +23,13 @@ const Header = () => {
             <h1>{"Treedle"}</h1>
             <div style={{width: widthMenu + "px"}} class="hamburger-menu">
                 <nav
-                    style={widthMenu == 125 ? fadeOut : fadeIn}
-                    className={widthMenu == 125 ? "hidden-nav" : ""}>
+                    style={widthMenu == 85 ? fadeOut : fadeIn}
+                    className={widthMenu == 85 ? "hidden-nav" : ""}>
                     <ul>
                         <li>
                             <svg
-                                width="50"
-                                height="58"
+                                width="40"
+                                height="48"
                                 viewBox="0 0 48 57"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -48,8 +48,8 @@ const Header = () => {
                         <li>
                             <svg
                                 className="profile-btn"
-                                width="50"
-                                height="58"
+                                width="40"
+                                height="48"
                                 viewBox="0 0 50 58"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -72,20 +72,20 @@ const Header = () => {
                 </nav>
                 <svg
                     onClick={hamburgerMenu}
-                    width="58"
-                    height="58"
+                    width="40"
+                    height="48"
                     viewBox="0 0 50 35"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect
-                        className={widthMenu == 350 ? "path" : ""}
+                        className={widthMenu == 185 ? "path" : ""}
                         width="50"
                         height="5"
                         rx="2.5"
                         fill="white"
                     />
                     <rect
-                        className={widthMenu == 350 ? "path" : ""}
+                        className={widthMenu == 185 ? "path" : ""}
                         y="15"
                         width="50"
                         height="5"
@@ -93,7 +93,7 @@ const Header = () => {
                         fill="white"
                     />
                     <rect
-                        className={widthMenu == 350 ? "path" : ""}
+                        className={widthMenu == 185 ? "path" : ""}
                         y="30"
                         width="50"
                         height="5"
