@@ -12,6 +12,8 @@
         font-family: "Inconsolata", monospace;
         position: relative;
         @import "partials/header";
+        @import "partials/login";
+
 
         main {
             display: flex;

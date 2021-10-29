@@ -1,0 +1,111 @@
+.login-register{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0px;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background: #8080807d;
+    justify-content: center;
+    align-items: center
+}
+.menu-login-register{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    width: 50%;
+    max-width: 800px;
+    height: 7.5%;
+    background-color:#184E5B ;
+    border-top-left-radius:30px ;
+    border-top-right-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size:64px;
+    justify-content: center;
+    .login{
+        display: flex;
+        align-items:center;
+        width:50%;
+        height: 100%;
+        border: 1px solid black;
+        border-top-left-radius: 25px;
+    }
+    .register{
+        display: flex;
+        align-items:center;
+        width:50%;
+        height: 100%;
+        border: 1px solid black;
+        border-top-right-radius:25px;
+    }
+    h2{
+        width: 100%;
+        margin: 10px 10px;
+        text-align: center;
+    }
+    
+}
+.login-field{
+    width: 50%;
+    max-width: 800px;
+    height: 69%;
+    display: flex;
+    background-color: #e3e3e3c7;
+    flex-direction: column;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    form{
+        margin: auto;        
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        label{
+            font-size:48px;
+        }
+        button{
+            margin-top: 10px;
+            width: 100%;
+            height: 70px;
+            border-radius: 25px;
+            font-size: 48px;
+            background: #184E5B ;
+            color: white;
+            border: 1px solid black
+        }
+        input{
+            height: 70px;
+            border-radius: 25px;
+            margin-bottom: 55px;
+            font-size: 25px;
+        }
+    }
+}
+
+@media  only screen and (max-width: 650px){
+    .menu-login-register{
+        flex-direction: column;
+        height: auto;
+        .login{
+            width: 100%;
+            border-top-right-radius: 25px;
+        }
+        .register{
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+    .login-field{
+        form{
+
+        }input{
+            width:100%
+        }
+    }
+    
+}
