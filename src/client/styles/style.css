@@ -123,6 +123,18 @@
 * body main .sidebar .gamelog {
   margin-top: 1.5rem;
 }
+@media screen and (max-width: 480px) {
+  * body main .sidebar {
+    bottom: 13%;
+    right: 2%;
+  }
+  * body main .sidebar svg {
+    width: 75%;
+  }
+  * body main .sidebar .gamelog {
+    margin-top: 1rem;
+  }
+}
 * body main .stats-container {
   background-color: white;
   border-radius: 5000px;
@@ -150,6 +162,21 @@
 }
 * body main .player-name {
   padding-right: 0 !important;
+}
+@media screen and (max-width: 480px) {
+  * body main .stats-container {
+    margin: 1rem;
+    width: auto;
+    bottom: 0;
+    left: 0;
+  }
+  * body main .stats-container p, * body main .stats-container a {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+  * body main .stats-container svg {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

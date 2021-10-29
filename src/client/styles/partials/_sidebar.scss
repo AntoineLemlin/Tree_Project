@@ -10,3 +10,18 @@
         margin-top: 1.5rem;
     }
 }
+
+@media screen and (max-width:480px) {
+    .sidebar {
+        bottom: 13%;
+        right: 2%;
+
+        svg {
+            width: 75%;
+        }
+
+        .gamelog {
+            margin-top: 1rem;
+        }
+    }
+}
