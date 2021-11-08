@@ -18,7 +18,7 @@ const trees = [];
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, "/bin/client")));
+app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
 app.get("/api/tree", (req, res) => {
 client.connect(err => {
