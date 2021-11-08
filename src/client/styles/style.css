@@ -12,6 +12,7 @@
   background-color: #003b4a;
   font-family: "Inconsolata", monospace;
   position: relative;
+  overflow: hidden;
 }
 
 * body header {
@@ -421,7 +422,8 @@
     padding: 0 1rem;
   }
   * body main .stats-container svg {
-    width: 6rem;
+    width: 50%;
+    min-width: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
