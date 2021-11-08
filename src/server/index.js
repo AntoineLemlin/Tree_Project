@@ -9,7 +9,7 @@
 import express from "express";
 import path from "path";
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://thomas-b:zBaiQVtqyzN7eZqw@cluster0.0xebq.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://thomas-b:zBaiQVtqyzN7eZqw@cluster0.0xebq.mongodb.net/test?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const {APP_PORT} = process.env;
@@ -18,7 +18,7 @@ const trees = [];
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, "../../bin/client")));
+app.use(express.static(path.resolve(__dirname, "/bin/client")));
 
 app.get("/api/tree", (req, res) => {
 client.connect(err => {
@@ -29,6 +29,7 @@ client.connect(err => {
         result.forEach(element => {
             trees.push(element);
         });
+        res.send(trees);
       client.close();
   })
 });
