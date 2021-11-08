@@ -8,12 +8,15 @@
 
 import express from "express";
 import path from "path";
+
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://thomas-b:zBaiQVtqyzN7eZqw@cluster0.0xebq.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://thomas-b:zBaiQVtqyzN7eZqw@cluster0.0xebq.mongodb.net/test?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const {APP_PORT} = process.env;
 
+console.log(process.env.REACT_APP_TEST)
 const trees = [];
 
 const app = express();
@@ -29,6 +32,7 @@ client.connect(err => {
         result.forEach(element => {
             trees.push(element);
         });
+        res.send(trees);
       client.close();
   })
 });
