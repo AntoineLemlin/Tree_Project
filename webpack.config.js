@@ -23,6 +23,12 @@ module.exports = (env) => {
             template: resolve(__dirname, "./src/index.html"),
             path: "../",
         }),
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env),
+          }),
+        new webpack.DefinePlugin({
+            "process.env.TEST": JSON.stringify(process.env.TEST),
+        })
     ];
 
     let optimization = {};
