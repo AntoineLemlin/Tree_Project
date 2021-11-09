@@ -15,13 +15,11 @@ const {APP_PORT, URI} = process.env;
 
 const client = new MongoClient(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const trees = [];
-
 const app = express()
-
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
 app.get("/api/tree", (req, res) => {
+  const trees = [];
 client.connect(err => {
   const collection = client.db("DataTree").collection("Trees");
   collection.find({}).toArray((err,result) => {
@@ -35,7 +33,6 @@ client.connect(err => {
   })
 });
 });
-setTimeout(() => console.log(trees), 10000)
 
 app.listen(APP_PORT, () =>
     console.log(`🚀 Server is listening on port ${APP_PORT}.`),

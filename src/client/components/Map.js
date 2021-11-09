@@ -10,7 +10,8 @@ function test(_iconSize){
 }
 
  
-const Map = () => (
+const Map = (props) => {
+    return (
    
     <div className="map-liege">
         <MapContainer
@@ -25,6 +26,16 @@ const Map = () => (
       </Popup>
     </Marker>
 
+    {Object.values(props.listTrees).map((tree) => {if(tree.geoloc != null) {
+                {console.log("boop")}
+            return( <Marker key={tree.geoloc.lat} icon={test(80)} position={[tree.geoloc.lat, tree.geoloc.lon]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>)
+            }
+        }
+    )}
 
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -32,6 +43,6 @@ const Map = () => (
             />
         </MapContainer>
     </div>
-);
+)};
 
 export default Map;
