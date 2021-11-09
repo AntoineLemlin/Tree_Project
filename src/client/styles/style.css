@@ -338,6 +338,14 @@
   border-radius: 5rem;
 }
 
+* body main .hide {
+  visibility: hidden;
+}
+
+* body main .make-visible {
+  visibility: visible;
+}
+
 * body main .sidebar {
   width: auto;
   height: auto;
