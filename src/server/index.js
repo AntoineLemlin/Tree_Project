@@ -10,16 +10,14 @@ import express from "express";
 import path from "path";
 
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://thomas-b:zBaiQVtqyzN7eZqw@cluster0.0xebq.mongodb.net/test?retryWrites=true&w=majority"
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const {APP_PORT, URI} = process.env;
 
 
-const {APP_PORT} = process.env;
+const client = new MongoClient(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-console.log(process.env.REACT_APP_TEST)
 const trees = [];
 
-const app = express();
+const app = express()
 
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
