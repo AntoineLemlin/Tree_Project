@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
-import Map from "./components/Map";
+import Carte from "./components/Map";
 import Login from "./components/login";
 import Statbar from "./components/Statbar";
 import axios from "axios";
@@ -29,7 +29,7 @@ useEffect(()=>{
             <Login />
             <Header />
             <main>
-                <Map listTrees={trees}/>
+                <Carte listTrees={trees}/>
                 <Sidebar />
                 <Statbar />
             </main>
