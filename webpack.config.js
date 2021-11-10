@@ -11,6 +11,7 @@
 const webpack = require("webpack");
 const {resolve} = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = (env) => {
     const plugins = [
@@ -109,13 +110,16 @@ module.exports = (env) => {
                 },
             ],
         },
-
         plugins,
         optimization,
         performance: {hints: false},
         output: {
-            path: resolve(__dirname, "./bin/client"),
+            path: path.resolve(__dirname, "./bin/client"),
             filename: env === "dev" ? "js/bundle.js" : "js/[chunkhash].js",
+        },
+        devServer: {
+            // contentBase: path.join(__dirname, './bin/client'),
+            historyApiFallback: true // this prevents the default browser full page refresh on form submission and link change
         },
         watch: env === "dev",
     };
