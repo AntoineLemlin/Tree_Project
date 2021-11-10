@@ -11,6 +11,7 @@
 const webpack = require("webpack");
 const {resolve} = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = (env) => {
     const plugins = [
@@ -109,13 +110,13 @@ module.exports = (env) => {
                 },
             ],
         },
-
         plugins,
         optimization,
         performance: {hints: false},
         output: {
-            path: resolve(__dirname, "./bin/client"),
+            path: path.resolve(__dirname, "./bin/client"),
             filename: env === "dev" ? "js/bundle.js" : "js/[chunkhash].js",
+            publicPath: "/",
         },
         watch: env === "dev",
     };

@@ -9,29 +9,31 @@
 import express from "express";
 import path from "path";
 
-const { MongoClient } = require('mongodb');
+const {MongoClient} = require("mongodb");
 const {APP_PORT, URI} = process.env;
 
+const client = new MongoClient(URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
-const client = new MongoClient(URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
-const app = express()
+const app = express();
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
 app.get("/api/tree", (req, res) => {
-  const trees = [];
-client.connect(err => {
-  const collection = client.db("DataTree").collection("Trees");
-  collection.find({}).toArray((err,result) => {
-      if (err) throw err;
-        console.log("Data fetched");
-        result.forEach(element => {
-            trees.push(element);
+    const trees = [];
+    client.connect((err) => {
+        const collection = client.db("DataTree").collection("Trees");
+        collection.find({}).toArray((err, result) => {
+            if (err) throw err;
+            console.log("Data fetched");
+            result.forEach((element) => {
+                trees.push(element);
+            });
+            res.send(trees);
+            client.close();
         });
-        res.send(trees);
-      client.close();
-  })
-});
+    });
 });
 
 app.listen(APP_PORT, () =>
