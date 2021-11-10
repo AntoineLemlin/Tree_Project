@@ -141,7 +141,9 @@
 
 * body .login-register {
   position: absolute;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -222,9 +224,7 @@
   width: 50%;
   max-width: 800px;
   height: 69%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   background-color: #e3e3e3c7;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -267,6 +267,57 @@
   border-radius: 25px;
   margin-bottom: 55px;
   font-size: 25px;
+}
+
+* body .register-field {
+  width: 50%;
+  max-width: 800px;
+  height: 69%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e3e3e3c7;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+* body .register-field form {
+  margin: auto;
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+* body .register-field form label {
+  font-size: 48px;
+}
+
+* body .register-field form button {
+  margin-top: 5px;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 30px;
+  background: #184E5B;
+  color: white;
+  border: 1px solid black;
+}
+
+* body .register-field form input {
+  height: 40px;
+  border-radius: 25px;
+  margin-bottom: 2px;
+  font-size: 17px;
 }
 
 @media only screen and (max-width: 1000px) {

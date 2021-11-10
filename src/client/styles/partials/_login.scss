@@ -1,7 +1,7 @@
 .login-register{
 
     position: absolute;
-    display:none;
+    display:flex;
     flex-direction: column;
     left: 0;
     top: 0px;
@@ -54,7 +54,7 @@
     width: 50%;
     max-width: 800px;
     height: 69%;
-    display: flex;
+    display: none;
     background-color: #e3e3e3c7;
     flex-direction: column;
     border-bottom-left-radius: 25px;
@@ -83,6 +83,42 @@
             border-radius: 25px;
             margin-bottom: 55px;
             font-size: 25px;
+        }
+    }
+}
+.register-field{
+    width: 50%;
+    max-width: 800px;
+    height: 69%;
+    display: flex;
+    background-color: #e3e3e3c7;
+    flex-direction: column;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    form{
+        margin: auto;        
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        label{
+            font-size:48px;
+        }
+        button{
+            margin-top: 5px;
+            width: 100%;
+            height: 40px;
+            border-radius: 25px;
+            font-size: 30px;
+            background: #184E5B ;
+            color: white;
+            border: 1px solid black
+        }
+        input{
+            height: 40px;
+            border-radius: 25px;
+            margin-bottom: 2px;
+            font-size: 17px;
         }
     }
 }
