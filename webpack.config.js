@@ -116,10 +116,7 @@ module.exports = (env) => {
         output: {
             path: path.resolve(__dirname, "./bin/client"),
             filename: env === "dev" ? "js/bundle.js" : "js/[chunkhash].js",
-        },
-        devServer: {
-            // contentBase: path.join(__dirname, './bin/client'),
-            historyApiFallback: true // this prevents the default browser full page refresh on form submission and link change
+            publicPath: "/",
         },
         watch: env === "dev",
     };

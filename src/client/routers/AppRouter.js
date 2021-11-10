@@ -1,17 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Link, NavLink } from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import LoginScreen from "../screens/LoginScreen";
 import MapScreen from "../screens/MapScreen";
 
 const AppRouter = () => {
-
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route exact path="/" component={MapScreen} />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+    return (
+        <HashRouter>
+            <div>
+                <Routes>
+                    <Route path="/" element={<MapScreen />} />
+                    <Route path="/login" element={<LoginScreen />} />
+                </Routes>
+            </div>
+        </HashRouter>
+    );
+};
 
 export default AppRouter;
