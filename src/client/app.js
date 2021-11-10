@@ -4,7 +4,7 @@ import MapScreen from "./screens/MapScreen";
 
 const App = () => {
     return ( 
-        <MapScreen/>
+        <AppRouter/>
      );
 }
  
