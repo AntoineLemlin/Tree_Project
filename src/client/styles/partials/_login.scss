@@ -51,7 +51,7 @@
 .login-field {
     width: 50%;
     max-width: 800px;
-    height: 69%;
+    height: 700px;
     display: none;
     background-color: #e3e3e3c7;
     flex-direction: column;
@@ -84,11 +84,10 @@
         }
     }
 }
-<<<<<<< HEAD
 .register-field{
     width: 50%;
     max-width: 800px;
-    height: 69%;
+    height: 700px;
     display: flex;
     background-color: #e3e3e3c7;
     flex-direction: column;
@@ -127,17 +126,15 @@
         width: 100%;
         }input{
             width:100%
-=======
-@media only screen and (max-width: 1000px) {
-    .login-field {
-        form {
-            width: 100%;
-        }
-        input {
-            width: 100%;
->>>>>>> 3aff218f256687a751e77ec52d039a866996199c
         }
     }
+    .register-field{
+        form{
+            width: 100%;
+            }input{
+                width:100%
+            }
+        }
 }
 
 @media only screen and (max-width: 700px) {
@@ -163,11 +160,32 @@
             width: 100%;
         }
     }
+    .register-field {
+        width: 100%;
+        form {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+    }
 }
 @media screen and (max-width: 400px) {
     .login-field {
-        form label {
+        form {
+            label {
             font-size: 30px;
         }
+    }
+    }
+    .register-field {
+        form {
+            label {
+            font-size: 30px;
+        }
+        input{
+            margin-bottom: 30px;
+        }}
+        
     }
 }

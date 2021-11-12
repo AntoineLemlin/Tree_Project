@@ -16,7 +16,7 @@ const Carte = (props) => {
     const markers = [];
 
     const drawMarkers = () => {
-        Object.values(props.listTrees).map((tree, i) => {if(tree.geoloc != null) {
+        Object.values(props.listTrees).map((tree, i) => {if(tree.geoloc != null && i<0) {
             markers.push(
                 {
                     position: [tree.geoloc.lat, tree.geoloc.lon],
