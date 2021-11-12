@@ -3,12 +3,7 @@ import { Map, TileLayer,Marker,Popup} from "react-leaflet";
 import L ,{iconSize} from "leaflet"
 import tree1 from "../img/tree-svgrepo-com.svg"
 import PixiOverlay from 'react-leaflet-pixi-overlay'
-function test(_iconSize){
-    return L.icon({
-        iconUrl:tree1,
-        iconSize: [_iconSize]
-    })
-}
+
 
 
 
