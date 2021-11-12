@@ -40,6 +40,7 @@ app.post("/login",(req,res)=>{
     client.connect((err)=>{
         const collection = client.db("DataTree").collection("Users");
         const {user,password} =req.body;
+        console.log(user + password)
         collection.findone({username:user},(err,user)=>{
             if(user){
                if(password === user.password){

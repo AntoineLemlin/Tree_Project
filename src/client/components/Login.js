@@ -15,12 +15,14 @@ const Login = ({setLoginUser}) => {
                 ...user,
                 [name]:value
             })
+            console.log(value)
         }
         const login = () => {
             axios.post("/login", user)
             .then(res=>{alert(res.data.message)
             setLoginUser(res.data.user)
-        history.push("/")})
+        })
+        console.log(user)
         }
 
     return (
@@ -34,10 +36,10 @@ const Login = ({setLoginUser}) => {
                </div>
            </div>
         <div className="login-field">
-        <form>
+        <form action="#">
         <label for="username"> username</label>
     
-        <input type="text" id="username" name="username" value={user.name} onChange={handleChange}></input>
+        <input type="text" id="username" name="username" value={user.email} onChange={handleChange}></input>
         <label for="password">Password </label>
         <input type="text" id="password" name="password" value={user.password} onChange={handleChange}></input>
         <button type="submit" onClick={login}>Login</button>
