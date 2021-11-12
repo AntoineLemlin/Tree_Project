@@ -36,6 +36,24 @@ app.get("/api/tree", (req, res) => {
     });
 });
 
+app.post("/login",(req,res)=>{
+    client.connect((err)=>{
+        const collection = client.db("DataTree").collection("Users");
+        const {user,password} =req.body;
+        collection.findone({username:user},(err,user)=>{
+            if(user){
+               if(password === user.password){
+                   res.send({message:"login sucess",user:user})
+               }else{
+                   res.send({message:"wrong credentials"})
+               }
+            }else{
+                res.send("not register")
+            }
+        })
+    })
+});
+
 app.listen(APP_PORT, () =>
     console.log(`🚀 Server is listening on port ${APP_PORT}.`),
 );

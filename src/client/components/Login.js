@@ -1,6 +1,28 @@
 import * as React from "react";
+import axios from "axios";
+import { useNavigate } from "react-router";
 
-const Login = () => {
+
+const Login = ({setLoginUser}) => {
+        const history = useNavigate()
+        const [user, setUser] = React.useState({
+            name: "",
+            password: ""
+        })
+        const handleChange = e => {
+            const {name,value} = e.target
+            setUser({
+                ...user,
+                [name]:value
+            })
+        }
+        const login = () => {
+            axios.post("/login", user)
+            .then(res=>{alert(res.data.message)
+            setLoginUser(res.data.user)
+        history.push("/")})
+        }
+
     return (
         <div className="login-register">
            <div className="menu-login-register">
@@ -15,10 +37,10 @@ const Login = () => {
         <form>
         <label for="username"> username</label>
     
-        <input type="text" id="username" name="username" ></input>
+        <input type="text" id="username" name="username" value={user.name} onChange={handleChange}></input>
         <label for="password">Password </label>
-        <input type="text"id="password" name="password"></input>
-        <button>Login</button>
+        <input type="text" id="password" name="password" value={user.password} onChange={handleChange}></input>
+        <button type="submit" onClick={login}>Login</button>
         </form>
       
 
