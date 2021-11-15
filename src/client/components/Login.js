@@ -1,9 +1,26 @@
 import * as React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { useRef } from "react";
 
 
 const Login = ({setLoginUser}) => {
+const reflogin = useRef(0)
+    const refRegister = useRef(0)
+    function displayLogin(){
+       reflogin.current.style.display = "flex"
+        refRegister.current.style.display = "none"
+        console.log(0)
+
+    }
+    function displayRegister(){
+        reflogin.current.style.display = "none"
+        refRegister.current.style.display = "flex"
+        console.log(1) 
+
+    }
+
+
         const history = useNavigate()
         const [user, setUser] = React.useState({
             name: "",
@@ -28,14 +45,14 @@ const Login = ({setLoginUser}) => {
     return (
         <div className="login-register">
            <div className="menu-login-register">
-            <div className="login">
+            <div className="login" onClick={displayLogin}>
                <h2>login</h2>
                </div>
-               <div className="register">
+               <div className="register" onClick={displayRegister}>
                <h2>register</h2>
                </div>
            </div>
-        <div className="login-field">
+        <div className="login-field"  ref={reflogin}>
         <form action="#">
         <label for="username"> username</label>
     
@@ -47,7 +64,7 @@ const Login = ({setLoginUser}) => {
       
 
         </div>
-        <div ref={div1} className="register-field">
+        <div ref={refRegister}  className="register-field">
         <form>
         <label for="email">email </label>
         <input type="text"id="email" name="email"></input>
