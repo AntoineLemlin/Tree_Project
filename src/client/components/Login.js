@@ -47,6 +47,20 @@ const Login = ({setLoginUser}) => {
       
 
         </div>
+        <div ref={div1} className="register-field">
+        <form>
+        <label for="email">email </label>
+        <input type="text"id="email" name="email"></input>
+        <label for="username"> username</label>
+        <input type="text" id="username" name="username" ></input>
+        <label for="password">Password </label>
+        <input type="text"id="password" name="password"></input>
+        
+        <button>Login</button>
+        </form>
+        
+
+        </div>
         </div>
 
 
