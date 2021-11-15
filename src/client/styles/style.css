@@ -271,6 +271,55 @@
   font-size: 25px;
 }
 
+* body .register-field {
+  width: 50%;
+  max-width: 800px;
+  height: 69%;
+  display: none;
+  background-color: #e3e3e3c7;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+* body .register-field form {
+  margin: auto;
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+* body .register-field form label {
+  font-size: 48px;
+}
+
+* body .register-field form button {
+  margin-top: 10px;
+  width: 100%;
+  height: 70px;
+  border-radius: 25px;
+  font-size: 48px;
+  background: #184e5b;
+  color: white;
+  border: 1px solid black;
+}
+
+* body .register-field form input {
+  height: 35px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
 @media only screen and (max-width: 1000px) {
   * body .login-field form {
     width: 100%;
@@ -278,10 +327,6 @@
   * body .login-field input {
     width: 100%;
   }
-}
-
-* body .register-field {
-  display: none;
 }
 
 @media only screen and (max-width: 700px) {
