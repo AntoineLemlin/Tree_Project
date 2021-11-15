@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Map, TileLayer,Marker,Popup} from "react-leaflet";
-import L ,{iconSize} from "leaflet"
+import L ,{iconSize, distanceTo, latLng} from "leaflet"
 import tree1 from "../img/tree-svgrepo-com.svg"
 import PixiOverlay from 'react-leaflet-pixi-overlay'
 function test(_iconSize){
@@ -20,8 +20,11 @@ const Carte = (props) => {
             markers.push(
                 {
                     position: [tree.geoloc.lat, tree.geoloc.lon],
-                    onClick: () => alert(`${tree.nom_complet}`),
-                    tooltip: `${tree.nom_complet}`,
+                    onClick: () => (
+                        alert(`${tree.nom_complet}
+                        ${Math.round(tree.hauteur_totale*tree.diametre_cime)}
+                        ${markers.forEachdistanceTo(L.latLng({lat: tree.geloloc.lat, lng: tree.geoloc.lon}))}`)),
+                    tooltip: `${tree.nom_complet}<br>${Math.round(tree.hauteur_totale*tree.diametre_cime)}`,
                     id: `${i}`,
                     iconId: `icon-${i}`,
                     customIcon:  `<svg width="26" height="31" viewBox="0 0 52 62" fill="none" xmlns="http://www.w3.org/2000/svg">
