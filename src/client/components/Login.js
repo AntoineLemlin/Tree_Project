@@ -1,20 +1,30 @@
 import * as React from "react";
-import {useRef} from "react"
-const Login = () => {
-    const div = useRef(0)
-    const div1 = useRef(0)
-    function test(){
-        div.current.style.display = "flex"
-        div1.current.style.display = "none"
-        console.log(0)
+import axios from "axios";
+import { useNavigate } from "react-router";
 
-    }
-    function test1(){
-        div.current.style.display = "none"
-        div1.current.style.display = "flex"
-        console.log(1) 
 
-    }
+const Login = ({setLoginUser}) => {
+        const history = useNavigate()
+        const [user, setUser] = React.useState({
+            name: "",
+            password: ""
+        })
+        const handleChange = e => {
+            const {name,value} = e.target
+            setUser({
+                ...user,
+                [name]:value
+            })
+            console.log(value)
+        }
+        const login = () => {
+            axios.post("/login", user)
+            .then(res=>{alert(res.data.message)
+            setLoginUser(res.data.user)
+        })
+        console.log(user)
+        }
+
     return (
         <div className="login-register"> 
            <div className="menu-login-register">
@@ -25,14 +35,19 @@ const Login = () => {
                <h2>register</h2>
                </div>
            </div>
+<<<<<<< HEAD
         <div ref={div} className="login-field">
         <form>
+=======
+        <div className="login-field">
+        <form action="#">
+>>>>>>> leafLogic
         <label for="username"> username</label>
     
-        <input type="text" id="username" name="username" ></input>
+        <input type="text" id="username" name="username" value={user.email} onChange={handleChange}></input>
         <label for="password">Password </label>
-        <input type="text"id="password" name="password"></input>
-        <button>Login</button>
+        <input type="text" id="password" name="password" value={user.password} onChange={handleChange}></input>
+        <button type="submit" onClick={login}>Login</button>
         </form>
       
 
