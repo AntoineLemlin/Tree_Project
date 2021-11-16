@@ -11,12 +11,17 @@
     border-radius: 5rem;
 }
 
-.hide{
+.hide {
     visibility: hidden;
 }
 
-.make-visible{
+.make-visible {
     visibility: visible;
+}
+
+.popup {
+    max-width: auto;
+    font-size: 65px;
 }
 
 // merci a Iris pour le feedback

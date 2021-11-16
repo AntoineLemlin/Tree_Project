@@ -348,6 +348,11 @@
   visibility: visible;
 }
 
+* body main .popup {
+  max-width: auto;
+  font-size: 65px;
+}
+
 * body main .sidebar {
   width: auto;
   height: auto;
