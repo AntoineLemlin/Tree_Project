@@ -3,6 +3,27 @@ import * as React from "react";
 const Sidebar = () => {
     return (
         <div className="sidebar">
+            <div className="info sidebar-element">
+                <a href="#">
+                    <svg
+                        width="100"
+                        height="100"
+                        viewBox="0 0 120 120"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="120" height="120" rx="60" fill="#FFFAFA" />
+                        <rect
+                            x="53"
+                            y="45"
+                            width="14"
+                            height="53"
+                            rx="7"
+                            fill="#1B365C"
+                        />
+                        <circle cx="60" cy="29" r="7" fill="#1B365C" />
+                    </svg>
+                </a>
+            </div>
             <div className="leaderboards sidebar-element">
                 <a href="#">
                     <svg

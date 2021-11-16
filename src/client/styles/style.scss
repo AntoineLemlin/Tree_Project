@@ -15,6 +15,12 @@
         @import "partials/header";
         @import "partials/login";
 
+        .centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 95vh;
+        }
 
         main {
             display: flex;

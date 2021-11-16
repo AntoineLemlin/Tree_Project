@@ -9,9 +9,13 @@
     .gamelog {
         margin-top: 1.5rem;
     }
+
+    .info {
+        margin-bottom: 1.5rem;
+    }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width: 650px) {
     .sidebar {
         right: 2%;
         bottom: 10rem;

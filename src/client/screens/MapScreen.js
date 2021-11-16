@@ -28,7 +28,7 @@ const MapScreen = () => {
     return (
         <div className={"app"}>
             <Header />
-            <main>
+            <main className={loading ? "centered" : ""}>
                 {loading ? (
                     <Loader
                         type="Oval"
