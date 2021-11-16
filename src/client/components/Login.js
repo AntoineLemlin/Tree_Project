@@ -35,13 +35,8 @@ const Login = ({setLoginUser}) => {
                <h2>register</h2>
                </div>
            </div>
-<<<<<<< HEAD
-        <div ref={div} className="login-field">
-        <form>
-=======
         <div className="login-field">
         <form action="#">
->>>>>>> leafLogic
         <label for="username"> username</label>
     
         <input type="text" id="username" name="username" value={user.email} onChange={handleChange}></input>
