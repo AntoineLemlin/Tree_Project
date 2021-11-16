@@ -64,7 +64,8 @@
     "react-leaflet": "^2.8.0",
     "react-leaflet-pixi-overlay": "^1.0.12",
     "react-loader-spinner": "^4.0.0",
-    "react-router-dom": "^6.0.2"
+    "react-router-dom": "^6.0.2",
+    "validator": "^13.7.0"
   },
   "husky": {
     "hooks": {
