@@ -84,7 +84,14 @@ const Carte = (props) => {
                                     // }
                                 >
                                     <Popup className="popup">
-                                        <h2>Nom: {tree.nom_complet}</h2>
+                                        <h2>Nom: 
+                                            { tree.nom_complet !== " en cours de détermination" ? 
+                                            <a href={`http://wikipedia.org/wiki/${tree.nom_complet.replace(/ /g,"_").split("'")[0]}`} target="_blank">
+                                                {tree.nom_complet}
+                                            </a> 
+                                            : tree.nom_complet
+                                        }
+                                        </h2>
                                         <h2>
                                             Price:
                                             {Math.ceil(
