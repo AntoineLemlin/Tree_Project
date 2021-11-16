@@ -98,7 +98,7 @@ const Carte = (props) => {
                 preferCanvas={true}
                 className="map-layout"
                 center={[50.6385, 5.5811]}
-                maxZoom={19}
+                maxZoom={18}
                 zoom={13}
                 minZoom={3}
                 scrollWheelZoom={true}
@@ -107,11 +107,11 @@ const Carte = (props) => {
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <MarkerClusterGroup>
+                <MarkerClusterGroup disableClusteringAtZoom={18}>
                     { 
                             Object.values(props.listTrees).map((tree, i) => {
                                 if (tree.geoloc != null) {
-                                    return (<Marker position={[50.6385, 5.5811]}
+                                    return (<Marker position={[tree.geoloc.lat, tree.geoloc.lon]}
                                         // onClick= {() => {
                                         //     treeRadius(tree);
                                         //     console.log(number)
