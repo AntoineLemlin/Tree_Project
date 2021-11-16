@@ -54,6 +54,7 @@
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.0.6",
+    "buffer": "^6.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "leaflet": "^1.7.1",
