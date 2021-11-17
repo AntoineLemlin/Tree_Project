@@ -59,7 +59,7 @@ const Carte = (props) => {
                 />
                 <MarkerClusterGroup>
                     {Object.values(props.listTrees).map((tree, i) => {
-                        if (tree.geoloc != null) {
+                        if (tree.geoloc != null && tree.hauteur_totale != null && tree.diametre_cime != null) {
                             return (
                                 <Marker
                                     position={[
@@ -85,10 +85,11 @@ const Carte = (props) => {
                                 >
                                     <Popup className="popup">
                                         <h2>
-                                            Nom:
+                                            {"Nom: "}
                                             {tree.nom_complet !==
-                                            " en cours de détermination" ? (
+                                            "en cours de détermination" ? (
                                                 <a
+                                                    className={"tree-link"}
                                                     href={`http://wikipedia.org/wiki/${
                                                         tree.nom_complet
                                                             .replace(/ /g, "_")
@@ -102,7 +103,7 @@ const Carte = (props) => {
                                             )}
                                         </h2>
                                         <h2>
-                                            Price:
+                                            {"Price: "}
                                             {Math.ceil(
                                                 tree.hauteur_totale *
                                                     tree.diametre_cime,

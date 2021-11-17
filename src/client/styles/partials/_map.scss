@@ -22,6 +22,12 @@
 .popup {
     max-width: auto;
     font-size: 65px;
+
+    a {
+        font-size: inherit;
+        text-decoration: underline;
+        color: inherit;
+    }
 }
 
 // merci a Iris pour le feedback
