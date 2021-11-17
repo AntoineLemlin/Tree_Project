@@ -7,6 +7,7 @@
         NODE_ENV: "development"
         APP_PORT: 12345
         URI: ${MONGODB_URI}
+        TOKEN_SECRET : "dsqsqd15254qsdfqdsq154215sqdqsfq15452152"
       volumes:
         - "./package.json:/src/app/package.json"
         - "./node_modules:/src/app/node_modules"

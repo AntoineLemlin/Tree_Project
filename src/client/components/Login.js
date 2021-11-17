@@ -4,27 +4,7 @@ import { useNavigate } from "react-router";
 
 
 const Login = ({setLoginUser}) => {
-        const history = useNavigate()
-        const [user, setUser] = React.useState({
-            name: "",
-            password: ""
-        })
-        const handleChange = e => {
-            const {name,value} = e.target
-            setUser({
-                ...user,
-                [name]:value
-            })
-            console.log(value)
-        }
-        const login = () => {
-            axios.post("/login", user)
-            .then(res=>{alert(res.data.message)
-            setLoginUser(res.data.user)
-        })
-        console.log(user)
-        }
-
+        
     return (
         <div className="login-register">
            <div className="menu-login-register">
@@ -39,9 +19,9 @@ const Login = ({setLoginUser}) => {
         <form action="#">
         <label for="username"> username</label>
     
-        <input type="text" id="username" name="username" value={user.email} onChange={handleChange}></input>
+        <input type="text" id="username" name="username" ></input>
         <label for="password">Password </label>
-        <input type="text" id="password" name="password" value={user.password} onChange={handleChange}></input>
+        <input type="text" id="password" name="password" ></input>
         <button type="submit" onClick={login}>Login</button>
         </form>
       
