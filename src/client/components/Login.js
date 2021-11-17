@@ -3,26 +3,43 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 
-const Login = ({setLoginUser}) => {
-        
+const Login = ({setLogin, setSession}) => {
+    const [loginData, setLoginData] = React.useState({email: "", password: ""})
+    const newLogin = (loginData) => {
+        if(loginData.email != "" && loginData.password != "") {
+         axios.post("/api/user/login", loginData).then((res)=>{
+            setSession(res.data)
+         })
+        } else {
+            prompt("mec t'as oublié un truc")
+        }
+    }
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setLoginData({
+            ...loginData,
+            [name]: value,
+        });
+        console.log(value);
+    };
     return (
         <div className="login-register">
            <div className="menu-login-register">
-            <div className="login">
-               <h2>login</h2>
+            <div className="login" onClick={() => setLogin(true)}>
+               <h2>Login</h2>
                </div>
-               <div className="register">
-               <h2>register</h2>
+               <div className="register" onClick={() => setLogin(false)}>
+               <h2>Register</h2>
                </div>
            </div>
         <div className="login-field">
         <form action="#">
-        <label for="username"> username</label>
+        <label for="email">Email</label>
     
-        <input type="text" id="username" name="username" ></input>
+        <input onChange={handleChange} value={loginData.email} type="text" id="email" name="email" ></input>
         <label for="password">Password </label>
-        <input type="text" id="password" name="password" ></input>
-        <button type="submit" onClick={login}>Login</button>
+        <input onChange={handleChange} value={loginData.password} type="text" id="password" name="password" ></input>
+        <button onClick={()=>newLogin(loginData)}>Login</button>
         </form>
       
 
