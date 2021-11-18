@@ -1,3 +1,4 @@
+import axios from "axios";
 import * as React from "react";
 import {Link} from "react-router-dom";
 
@@ -48,8 +49,12 @@ const Header = () => {
                                 </svg>
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/login">
+                        <li onClick={() =>{
+                            axios.post("api/user/logout")
+                            .then(()=>{
+                                window.location = "/"
+                            })
+                        }}>
                                 <svg
                                     className="profile-btn"
                                     width="40"
@@ -71,7 +76,6 @@ const Header = () => {
                                         fill="white"
                                     />
                                 </svg>
-                            </Link>
                         </li>
                     </ul>
                 </nav>

@@ -7,8 +7,16 @@ const Login = ({setLogin, setSession}) => {
     const newLogin = (e) => {
         e.preventDefault();
         if(loginData.email != "" && loginData.password != "") {
-         axios.post("/api/user/login", loginData).then((res)=>{
-            setSession(res.data)
+         axios.post("/api/user/login", loginData)
+         .then((res)=> {
+            if(res.data.errors){
+                console.log("raté")
+            } else {
+                window.location = "/"
+            }
+         })
+         .catch((err) => {
+             console.log(err)
          })
         } else {
             prompt("mec t'as oublié un truc")
