@@ -5,17 +5,11 @@ import LoginScreen from "../screens/LoginScreen";
 import MapScreen from "../screens/MapScreen";
 
 const AppRouter = () => {
-    const [user, setLoginUser] = useState({});
+   const [session, setSession] = useState("")
     return (
         <HashRouter>
             <div>
-                <Routes>
-                    <Route path="/" element={<MapScreen />} />
-                    <Route
-                        path="/login"
-                        element={<LoginScreen setLoginUser={setLoginUser} />}
-                    />
-                </Routes>
+                    {session === "" ? <LoginScreen setSession={setSession}/> : <MapScreen/>}
             </div>
         </HashRouter>
     );

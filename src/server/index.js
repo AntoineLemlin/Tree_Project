@@ -1,23 +1,23 @@
-/* becodeorg/mwenbwa
- *
- * /src/server/index.js - Server entry point
- *
- * coded by leny@BeCode
- * started at 18/05/2020
- */
-
 import express from "express";
+import cookieParser from "cookie-parser"
+import UserRoutes from  './routes/user.routes'
+import {checkuser,requireauth} from './middleware/auth.middleware'
+const {APP_PORT,URI} = process.env;
+const mongoose = require('mongoose')
+const app = express()
 import path from "path";
-
 const {MongoClient} = require("mongodb");
-const {APP_PORT, URI} = process.env;
 
 const client = new MongoClient(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-const app = express();
+require('./db')
+
+app.use(express.json())
+app.use(express.urlencoded({extended: true}));
+app.use(cookieParser())
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
 app.get("/api/tree", (req, res) => {
@@ -36,25 +36,16 @@ app.get("/api/tree", (req, res) => {
     });
 });
 
-app.post("/login",(req,res)=>{
-    client.connect((err)=>{
-        const collection = client.db("DataTree").collection("Users");
-        const {user,password} =req.body;
-        console.log(user + password)
-        collection.findone({username:user},(err,user)=>{
-            if(user){
-               if(password === user.password){
-                   res.send({message:"login sucess",user:user})
-               }else{
-                   res.send({message:"wrong credentials"})
-               }
-            }else{
-                res.send("not register")
-            }
-        })
-    })
-});
+//middleware
 
+ app.get("*",checkuser)
+ app.get('/jwtid',requireauth,(req,res)=>{
+     res.status(200.).send(res.locals.user._id)
+ })
+//routes
+app.use('/api/user',UserRoutes)
+
+//server
 app.listen(APP_PORT, () =>
     console.log(`🚀 Server is listening on port ${APP_PORT}.`),
 );
