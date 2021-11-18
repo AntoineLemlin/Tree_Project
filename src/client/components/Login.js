@@ -2,7 +2,7 @@ import * as React from "react";
 import axios from "axios";
 import {useNavigate} from "react-router";
 
-const Login = ({setLogin, setSession}) => {
+const Login = ({setLogin, setUsername}) => {
     const [loginData, setLoginData] = React.useState({email: "", password: ""})
     const newLogin = (e) => {
         e.preventDefault();
@@ -12,6 +12,9 @@ const Login = ({setLogin, setSession}) => {
             if(res.data.errors){
                 console.log("raté")
             } else {
+                console.log("1"+res.data)
+                console.log("2"+res.data.username)
+                setUsername(res.data.username)
                 window.location = "/"
             }
          })
@@ -19,7 +22,7 @@ const Login = ({setLogin, setSession}) => {
              console.log(err)
          })
         } else {
-            prompt("mec t'as oublié un truc")
+            alert("mec t'as oublié un truc")
         }
     }
     const handleChange = (e) => {

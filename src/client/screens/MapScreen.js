@@ -7,7 +7,7 @@ import Carte from "../components/Map";
 import Statbar from "../components/Statbar";
 import axios from "axios";
 
-const MapScreen = () => {
+const MapScreen = ({username}) => {
     const [trees, setTrees] = useState({});
     const [loading, setLoading] = useState(true);
 
@@ -40,7 +40,7 @@ const MapScreen = () => {
                     <>
                         <Carte listTrees={trees} />
                         <Sidebar />
-                        <Statbar />
+                        <Statbar username={username}/>
                     </>
                 )}
             </main>

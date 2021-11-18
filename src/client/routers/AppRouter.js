@@ -6,7 +6,9 @@ import axios from "axios";
 
 const AppRouter = () => {
    const [session, setSession] = useState(null);
+   const [username, setUsername] = useState("");
    useEffect(() => {
+       console.log(username)
        const fetchId = () => {
             axios("/jwtid")
            .then((res) => {
@@ -22,7 +24,7 @@ const AppRouter = () => {
     return (
         <HashRouter>
             <div>
-                    {session === null ? <LoginScreen setSession={setSession}/> : <MapScreen/>}
+                    {session === null ? <LoginScreen setUsername={setUsername}/> : <MapScreen username={username}/>}
             </div>
         </HashRouter>
     );
