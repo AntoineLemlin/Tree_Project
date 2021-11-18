@@ -8,14 +8,14 @@ const AppRouter = () => {
    const [session, setSession] = useState(null);
    const [username, setUsername] = useState("");
    useEffect(() => {
-       console.log(username)
        const fetchId = () => {
             axios("/jwtid")
            .then((res) => {
-               setSession(res.data);
+               setSession(res.data.id);
+               setUsername(res.data.username)
             })
             .catch((err) => 
-                console.log("no token biatch"))
+                console.log("no token"))
             
        }
     fetchId()
@@ -24,7 +24,7 @@ const AppRouter = () => {
     return (
         <HashRouter>
             <div>
-                    {session === null ? <LoginScreen setUsername={setUsername}/> : <MapScreen username={username}/>}
+                    {session === null ? <LoginScreen/> : <MapScreen username={username}/>}
             </div>
         </HashRouter>
     );

@@ -2,7 +2,7 @@ import * as React from "react";
 import axios from "axios";
 import {useNavigate} from "react-router";
 
-const Login = ({setLogin, setUsername}) => {
+const Login = ({setLogin}) => {
     const [loginData, setLoginData] = React.useState({email: "", password: ""})
     const newLogin = (e) => {
         e.preventDefault();
@@ -12,9 +12,6 @@ const Login = ({setLogin, setUsername}) => {
             if(res.data.errors){
                 console.log("raté")
             } else {
-                console.log("1"+res.data)
-                console.log("2"+res.data.username)
-                setUsername(res.data.username)
                 window.location = "/"
             }
          })

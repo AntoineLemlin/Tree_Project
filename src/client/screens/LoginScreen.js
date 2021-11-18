@@ -5,13 +5,13 @@ import Header from "../components/Header";
 import Login from "../components/Login";
 import Register from "../components/Register";
 
-const LoginScreen = ({setUsername}) => {
+const LoginScreen = () => {
     const [login, setLogin] = useState(true)
     return (
         <div className={"login-screen"}>
             <Header />
             <main>
-                {login ? <Login setLogin={setLogin} setUsername={setUsername}/> : <Register setLogin={setLogin}/> }
+                {login ? <Login setLogin={setLogin}/> : <Register setLogin={setLogin}/> }
             </main>
         </div>
     );

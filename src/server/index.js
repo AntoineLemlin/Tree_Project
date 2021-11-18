@@ -40,7 +40,7 @@ app.get("/api/tree", (req, res) => {
 
  app.get("*",checkuser)
  app.get('/jwtid',requireauth,(req,res)=>{
-     res.status(200).send(res.locals.user._id)
+     res.status(200).send({id: res.locals.user._id, username: res.locals.user.username})
  })
 //routes
 app.use('/api/user',UserRoutes)
