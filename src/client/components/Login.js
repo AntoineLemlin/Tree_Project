@@ -5,7 +5,8 @@ import { useNavigate } from "react-router";
 
 const Login = ({setLogin, setSession}) => {
     const [loginData, setLoginData] = React.useState({email: "", password: ""})
-    const newLogin = (loginData) => {
+    const newLogin = (e) => {
+        e.preventDefault();
         if(loginData.email != "" && loginData.password != "") {
          axios.post("/api/user/login", loginData).then((res)=>{
             setSession(res.data)
@@ -33,13 +34,13 @@ const Login = ({setLogin, setSession}) => {
                </div>
            </div>
         <div className="login-field">
-        <form action="#">
+        <form action="#" onSubmit={newLogin}>
         <label for="email">Email</label>
     
         <input onChange={handleChange} value={loginData.email} type="text" id="email" name="email" ></input>
         <label for="password">Password </label>
         <input onChange={handleChange} value={loginData.password} type="text" id="password" name="password" ></input>
-        <button onClick={()=>newLogin(loginData)}>Login</button>
+        <input type="submit" value="Login"/>
         </form>
       
 
