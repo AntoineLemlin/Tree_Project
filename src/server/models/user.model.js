@@ -51,7 +51,7 @@ userSchema.statics.login = async function (email,password){
     const  user =  await this.findOne({email})
     if(user){  
          
-        if (password = user.password){
+        if (password == user.password){
         return user
          }
          throw Error('pass wrong')
