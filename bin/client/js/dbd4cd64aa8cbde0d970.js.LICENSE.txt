@@ -1,7 +1,0 @@
-/*!
- * @pixi/settings - v5.3.11
- * Compiled Mon, 01 Nov 2021 16:10:12 UTC
- *
- * @pixi/settings is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */

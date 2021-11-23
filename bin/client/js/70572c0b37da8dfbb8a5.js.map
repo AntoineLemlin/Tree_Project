@@ -1,1 +1,0 @@
-{"version":3,"file":"js/70572c0b37da8dfbb8a5.js","mappings":"6HAOA,QAJY,WACR,OAAO,gBAAC,IAAD","sources":["webpack:///./App.js"],"sourcesContent":["import React from \"react\";\r\nimport AppRouter from \"./routers/AppRouter\";\r\n\r\nconst App = () => {\r\n    return <AppRouter />;\r\n};\r\n\r\nexport default App;\r\n"],"names":[],"sourceRoot":""}
